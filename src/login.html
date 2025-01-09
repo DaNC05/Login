@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex w-full items-center justify-center bg-neutral-100">
+    <br />
+    <div class="bg-gray-800 w-80 h-full m-32 border rounded-lg">
+      <h1 class="text-center text-2xl text-white mt-5"><strong> Bem-Vindo </strong></h1>
+      <br />
+      <div class="h-100 row-gap- m grid grid-cols-1 items-center justify-center ">
+<form id="loginForm">
+        <input type="email" id="loginEmail" style=" width: 240px; height: 35px;" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="E-mail" />
+        <br />
+        <br>
+        <div id="containerPassword" class=" w-72">
+        <input type="password" minlength="8" style=" width: 240px; height: 35px;" id="loginPassword" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="Senha">
+        <button  type="button" id="botaoOlho" class="text-white absolute mt-3" style="transform: translateX(-110%);" 
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 1 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+    </div>
+        <br />
+        <div class="w-full flex justify-center">
+        <input type="submit" value="Login" class=" ml-9 mb-14 middle none center shadow-white-500/20 hover:shadow-white-500/40 mr-10 rounded-lg bg-white px-6 py-3 font-sans text-xs font-bold uppercase text-black shadow-md transition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" >
+      </div>
+      </form>
+
+        <p class=" mb-5 text-white text-center">
+            Não tem conta? <strong ><a href="register.html">Crie.</a></strong>
+        </p>
+      </div>
+    </div>
+    <script defer src ="register.js"></script>
+    <script>
+      const passwordInput = document.getElementById('loginPassword')
+    const botaoOlho = document.getElementById('botaoOlho')
+
+    botaoOlho.addEventListener('click', () => {
+        const type = passwordInput.type === 'password' ? 'text' : 'password';
+        passwordInput.type = type
+
+    botaoOlho.innerHTML = type === 'password'
+      ? `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 1 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+`
+      : `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18M10.94 10.94a3.5 3.5 0 014.12 4.12M9.88 9.88a3.5 3.5 0 014.24 4.24M12 5c4.477 0 8.268 2.943 9.542 7-.263.84-.63 1.64-1.08 2.38M4.458 7.62a9.97 9.97 0 00-1.08 2.38C3.732 7.943 7.523 5 12 5z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.343 9.343l5.314 5.314" />
+</svg>
+`;
+ } )
+
+    </script>
+  </body>
+</html>
