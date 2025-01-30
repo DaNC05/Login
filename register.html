@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body class="flex w-full items-center justify-center bg-neutral-100">
+    <br/>
+    <div class="bg-gray-800 w-80 h-full m-20 border rounded-lg" id="containerForm">
+      <h1 class="text-center text-2xl text-white mt-5"><strong> Faça sua conta. </strong></h1>
+      <br/>
+      <div class="h-100 row-gap- m grid grid-cols-1 items-center justify-center ">
+        <form id="registerForm" >
+        <input type="text" id="user" style=" width: 240px; height: 35px;" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="Usuário" required/>
+<br>
+<br>
+        <input type="email" id="email" style=" width: 240px; height: 35px;" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="E-mail" required />
+        <br>
+        <br>
+        <div id="containerPassword" class="  w-96">
+        <input type="password" minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style=" width: 240px; height: 35px;" id="password" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="Senha" required>
+  
+        <button type="button" id="botaoOlho" class="text-white absolute mt-3" style="transform: translateX(-110%);" 
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 1 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+      <br>
+        <div id="mensagem" style="display: none;">
+        <p class="text-white text-center  text-xs pt-2 ml-2" id="uppercase"  ><strong> A senha deve conter letras maiúsculas. </strong> </p>
+        <p class="text-white text-center text-xs pt-2 ml-2" id="simbolos"  ><strong> A senha deve conter simbolos(@,/,!). </strong> </p>
+        <p class="text-white text-center text-xs pt-2 ml-2" id="caracteres"><strong> A senha deve conter 8 caracteres. </strong> </p>
+        <p class="text-white text-center text-xs pt-2 ml-2" id="numeros"><strong> A senha deve conter números(1,2,3). </strong> </p>
+      </div>
+
+<br>
+        <input type="password" minlength="8" maxlength="16"  style=" width: 240px; height: 35px;" id="confirmPassword" class=" ml-9 border-b bg-transparent text-white text-lg focus:outline-none" placeholder="Confirme a Senha" required>
+
+        <button  type="button" minlength="8"  id="confirmBotaoOlho" class="text-white absolute mt-12 mr-3" style="transform: translate(-100%,55%);" 
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 1 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+    </div>
+        <br />
+        <div class="w-full flex justify-center">
+        <input type="submit" value="Criar Conta" class=" mb-14 middle none center shadow-white-500/20 hover:shadow-white-500/40  rounded-lg bg-white px-6 py-3 font-sans text-xs font-bold uppercase text-black shadow-md transition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" >
+      </div>
+      </form>
+        <p class=" mb-5 text-white text-center">
+            Já tem conta? <strong ><a href="login.html">Login.</a></strong>
+        </p>
+      </div>
+    </div>
+
+        <script defer src = './validacao.js'></script>   
+        <script defer src ='./register.js'></script>
+        <script defer src ="./olho.js"></script>
+  
+    
+
+  </body>
+</html>
